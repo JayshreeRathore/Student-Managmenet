@@ -8,7 +8,7 @@ const StudentTable = () => {
 
   
   useEffect(() => {
-    axios.get('student-managmenet2.vercel.app/display')
+    axios.get('http://localhost:5500/display')
       .then(users => {
         setUsers(users.data);
       })
@@ -18,7 +18,7 @@ const StudentTable = () => {
   }, []); 
 
 const handleDelete = (id) => {
-    axios.delete('student-managmenet2.vercel.app/delete/' +id)
+    axios.delete('http://localhost:5500/delete/' +id)
     .then(res => {console.log(res)
          window.location.reload()})
     .catch(err => console.log(err))
