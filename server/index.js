@@ -9,7 +9,7 @@ const User = require("./models/student");
 app.use(express.json());
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: [''],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 }));
 const Mongo = process.env.MONGO;
