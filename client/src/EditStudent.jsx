@@ -16,7 +16,7 @@ const EditStudent = () => {
   
   useEffect(() => {
     axios
-      .get('student-managmenet2.vercel.app/' + id)
+      .get('http://localhost:5500/' + id)
       .then((res) => {
         setFirstName(res.data.firstName );
         setSecondName(res.data.secondName );
@@ -30,7 +30,7 @@ const EditStudent = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put('student-managmenet2.vercel.app/edit/' + id, { firstName, secondName, fatherName, email, password })
+      .put('http://localhost:5500/edit/' + id, { firstName, secondName, fatherName, email, password })
       .then((result) => {
         navigate("/display"); 
       })
