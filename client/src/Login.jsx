@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
 
     axios
-      .post("student-managmenet2.vercel.app/login", formData)
+      .post("http://localhost:5500/login", formData)
       .then((result) => {
         console.log(result);
         navigate("/display"); 
