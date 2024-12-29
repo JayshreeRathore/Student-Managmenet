@@ -30,7 +30,7 @@ const EditStudent = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put('http://localhost:5500/edit/' + id, { firstName, secondName, fatherName, email, password })
+      .put('student-managmenet2.vercel.app/edit/' + id, { firstName, secondName, fatherName, email, password })
       .then((result) => {
         navigate("/display"); 
       })
