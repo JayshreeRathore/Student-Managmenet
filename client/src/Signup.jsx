@@ -27,7 +27,7 @@ const Signup = () => {
 
     
     axios
-      .post("http://student-managmenet2.vercel.app/signup", formData, {
+      .post("http://localhost:5500/signup", formData, {
         
       })
       .then((result) => {
