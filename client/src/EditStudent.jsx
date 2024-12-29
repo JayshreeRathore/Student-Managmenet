@@ -16,7 +16,7 @@ const EditStudent = () => {
   
   useEffect(() => {
     axios
-      .get('http://localhost:5500/edit/' + id)
+      .get('student-managmenet2.vercel.app/' + id)
       .then((res) => {
         setFirstName(res.data.firstName );
         setSecondName(res.data.secondName );
